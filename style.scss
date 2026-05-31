@@ -1,0 +1,18 @@
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+$fg-color: #{"@theme_fg_color"};
+/*$bg-color: #{"@theme_bg_color"};*/
+$bg-color:#fff8fb;
+$blue: #1793d1;
+
+window.Bar {
+  font-family: "JetBrainsMono Nerd Font";
+  background:$bg-color;
+  min-height: 30px;
+  padding: 0 8px;
+  border-bottom: 1px solid rgba($color: #dfd8d8df, $alpha: 0.98);
+  arch-logo {
+    color: $blue;
+    font-size: 1.2rem;
+    margin-right: 12px;
+  }
+}

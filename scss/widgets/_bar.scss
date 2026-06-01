@@ -1,0 +1,42 @@
+
+window.Bar {
+  background-color: var(--surface);
+  margin-top: 10px;
+  border-radius: 12px; /* 圆润的底部边角 */
+  color: var(--on-surface-variant);
+  min-height: 36px;
+  border-bottom: 1px solid var(--surface-variant);
+}
+
+/* ==========================================
+ * 左侧：Arch Logo
+ * ========================================== */
+window.Bar .arch-logo {
+  color: var(--primary); 
+  font-size: 1.4rem;
+  margin: 0 12px;
+}
+
+
+/* --- 右侧时钟与电源 --- */
+window.Bar .clock {
+  font-weight: 900;
+  color: var(--on-surface); 
+  margin-right: 12px;
+}
+
+window.Bar .logout-btn {
+  all: unset;
+  color: var(--on-surface-variant); 
+  font-size: 1.2rem;
+  padding: 4px 12px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  margin-right: 8px;
+}
+
+window.Bar .logout-btn:hover {
+  /* MD3 标准玩法：悬停时的警告操作，背景用 error-container，文字用 on-error-container */
+  background-color: var(--error-container); 
+  color: var(--on-error-container);
+}

@@ -3,82 +3,82 @@
    * 1. 核心强调色 (Primary) 
    * 用于最重要的突出显示
    * ========================================== */
-  --primary: #ffebee;
-  --on-primary: #000000;
-  --primary-container: #ffabbd;
-  --on-primary-container: #000000;
-  --inverse-primary: #723444;
-  --primary-fixed: #ffd9df;
-  --primary-fixed-dim: #ffb1c2;
-  --on-primary-fixed: #000000;
-  --on-primary-fixed-variant: #2c000e;
+  --primary: #511920;
+  --on-primary: #ffffff;
+  --primary-container: #75353c;
+  --on-primary-container: #ffffff;
+  --inverse-primary: #ffb2b7;
+  --primary-fixed: #75353c;
+  --primary-fixed-dim: #591f26;
+  --on-primary-fixed: #ffffff;
+  --on-primary-fixed-variant: #ffffff;
 
   /* ==========================================
    * 2. 次级强调色 (Secondary)
    * 用于较柔和的高亮
    * ========================================== */
-  --secondary: #ffebee;
-  --on-secondary: #000000;
-  --secondary-container: #e0b9c0;
-  --on-secondary-container: #000000;
-  --secondary-fixed: #ffd9df;
-  --secondary-fixed-dim: #e4bdc3;
-  --on-secondary-fixed: #000000;
-  --on-secondary-fixed-variant: #1f0b10;
+  --secondary: #3f2527;
+  --on-secondary: #ffffff;
+  --secondary-container: #5f4143;
+  --on-secondary-container: #ffffff;
+  --secondary-fixed: #5f4143;
+  --secondary-fixed-dim: #462b2d;
+  --on-secondary-fixed: #ffffff;
+  --on-secondary-fixed-variant: #ffffff;
 
   /* ==========================================
    * 3. 第三强调色 (Tertiary)
    * 用于需要与主色调区分的对比色，如特殊的警告、链接
    * ========================================== */
-  --tertiary: #ffedde;
-  --on-tertiary: #000000;
-  --tertiary-container: #e8ba8d;
-  --on-tertiary-container: #000000;
-  --tertiary-fixed: #ffdcbd;
-  --tertiary-fixed-dim: #ecbe91;
-  --on-tertiary-fixed: #000000;
-  --on-tertiary-fixed-variant: #1e0d00;
+  --tertiary: #3e2703;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #5f441d;
+  --on-tertiary-container: #ffffff;
+  --tertiary-fixed: #5f441d;
+  --tertiary-fixed-dim: #462e08;
+  --on-tertiary-fixed: #ffffff;
+  --on-tertiary-fixed-variant: #ffffff;
 
   /* ==========================================
    * 4. 状态颜色 (Error)
    * 用于危险操作、退出按钮、低电量警告
    * ========================================== */
-  --error: #ffece9;
-  --on-error: #000000;
-  --error-container: #ffaea4;
-  --on-error-container: #000000;
+  --error: #600004;
+  --on-error: #ffffff;
+  --error-container: #98000a;
+  --on-error-container: #ffffff;
 
   /* ==========================================
    * 5. 表面与背景 (Surfaces & Backgrounds)
    * 极其重要：用于构建不同层级的容器，配合 rgba 可实现完美的磨砂玻璃
    * ========================================== */
-  --background: #191113;
-  --on-background: #efdee0;
+  --background: #fff8f7;
+  --on-background: #22191a;
   
-  --surface: #191113;
-  --surface-dim: #191113;
-  --surface-bright: #594d4f;
-  --surface-tint: #ffb1c2;
-  --surface-variant: #524346;
+  --surface: #fff8f7;
+  --surface-dim: #c5b5b5;
+  --surface-bright: #fff8f7;
+  --surface-tint: #8f4a50;
+  --surface-variant: #f4ddde;
 
-  --surface-container-lowest: #000000;
-  --surface-container-low: #261d1f;
-  --surface-container: #382e30;
-  --surface-container-high: #43393a;
-  --surface-container-highest: #4f4446;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #ffeded;
+  --surface-container: #f0dede;
+  --surface-container-high: #e2d0d0;
+  --surface-container-highest: #d3c3c3;
 
-  --on-surface: #ffffff;
-  --on-surface-variant: #ffffff;
+  --on-surface: #000000;
+  --on-surface-variant: #000000;
   
-  --inverse-surface: #efdee0;
-  --inverse-on-surface: #000000;
+  --inverse-surface: #382e2e;
+  --inverse-on-surface: #ffffff;
 
   /* ==========================================
    * 6. 边框与轮廓 (Outlines)
    * 用于输入框边框、分割线
    * ========================================== */
-  --outline: #ffebee;
-  --outline-variant: #d2bec0;
+  --outline: #362929;
+  --outline-variant: #554546;
 
   /* ==========================================
    * 7. 阴影与遮罩 (Shadow & Scrim)

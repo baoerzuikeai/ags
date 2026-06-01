@@ -1,1 +1,4 @@
-@import 'themes';
+/* scss/main.scss */
+@use 'matugen_colors';  // 1. 先引入颜色变量
+@use 'globals';         // 2. 再引入全局配置
+@use 'widgets/bar';     // 3. 最后引入具体组件样式

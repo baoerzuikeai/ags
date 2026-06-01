@@ -1,0 +1,88 @@
+:root {
+  /* ==========================================
+   * 1. 核心强调色 (Primary) 
+   * 用于最重要的突出显示
+   * ========================================== */
+  --primary: #ffebee;
+  --on-primary: #000000;
+  --primary-container: #ffabbd;
+  --on-primary-container: #000000;
+  --inverse-primary: #723444;
+  --primary-fixed: #ffd9df;
+  --primary-fixed-dim: #ffb1c2;
+  --on-primary-fixed: #000000;
+  --on-primary-fixed-variant: #2c000e;
+
+  /* ==========================================
+   * 2. 次级强调色 (Secondary)
+   * 用于较柔和的高亮
+   * ========================================== */
+  --secondary: #ffebee;
+  --on-secondary: #000000;
+  --secondary-container: #e0b9c0;
+  --on-secondary-container: #000000;
+  --secondary-fixed: #ffd9df;
+  --secondary-fixed-dim: #e4bdc3;
+  --on-secondary-fixed: #000000;
+  --on-secondary-fixed-variant: #1f0b10;
+
+  /* ==========================================
+   * 3. 第三强调色 (Tertiary)
+   * 用于需要与主色调区分的对比色，如特殊的警告、链接
+   * ========================================== */
+  --tertiary: #ffedde;
+  --on-tertiary: #000000;
+  --tertiary-container: #e8ba8d;
+  --on-tertiary-container: #000000;
+  --tertiary-fixed: #ffdcbd;
+  --tertiary-fixed-dim: #ecbe91;
+  --on-tertiary-fixed: #000000;
+  --on-tertiary-fixed-variant: #1e0d00;
+
+  /* ==========================================
+   * 4. 状态颜色 (Error)
+   * 用于危险操作、退出按钮、低电量警告
+   * ========================================== */
+  --error: #ffece9;
+  --on-error: #000000;
+  --error-container: #ffaea4;
+  --on-error-container: #000000;
+
+  /* ==========================================
+   * 5. 表面与背景 (Surfaces & Backgrounds)
+   * 极其重要：用于构建不同层级的容器，配合 rgba 可实现完美的磨砂玻璃
+   * ========================================== */
+  --background: #191113;
+  --on-background: #efdee0;
+  
+  --surface: #191113;
+  --surface-dim: #191113;
+  --surface-bright: #594d4f;
+  --surface-tint: #ffb1c2;
+  --surface-variant: #524346;
+
+  --surface-container-lowest: #000000;
+  --surface-container-low: #261d1f;
+  --surface-container: #382e30;
+  --surface-container-high: #43393a;
+  --surface-container-highest: #4f4446;
+
+  --on-surface: #ffffff;
+  --on-surface-variant: #ffffff;
+  
+  --inverse-surface: #efdee0;
+  --inverse-on-surface: #000000;
+
+  /* ==========================================
+   * 6. 边框与轮廓 (Outlines)
+   * 用于输入框边框、分割线
+   * ========================================== */
+  --outline: #ffebee;
+  --outline-variant: #d2bec0;
+
+  /* ==========================================
+   * 7. 阴影与遮罩 (Shadow & Scrim)
+   * ========================================== */
+  --shadow: #000000;
+  --scrim: #000000;
+}

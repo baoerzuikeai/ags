@@ -1,18 +1,115 @@
-// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
-$fg-color: #{"@theme_fg_color"};
-/*$bg-color: #{"@theme_bg_color"};*/
 $bg-color:#fff8fb;
 $blue: #1793d1;
-
+/* ==========================================
+ * 全局 Bar 样式 (基于 #fff8fb 的同色系方案)
+ * ========================================== */
 window.Bar {
-  font-family: "JetBrainsMono Nerd Font";
-  background:$bg-color;
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  background-color: rgba(255, 248, 251, 0.9); /* #fff8fb，带点透明度 */
+  
+  /* 全局文字颜色：使用基于底色加深得到的“深暖灰棕色”，极其护眼且契合底色 */
+  color: #6e5d63; 
+  min-height: 36px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* ==========================================
+ * 左侧：Arch Logo
+ * ========================================== */
+window.Bar .arch-logo {
+  color: #909bde; /* 摒弃突兀的蓝色，融入整体色调 */
+  font-size: 1.4rem;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+/* ==========================================
+ * 中间：工作区 (同色系果冻流动)
+ * ========================================== */
+window.Bar .workspaces {
+  margin: 0;
+}
+
+/* ==========================================
+ * 1. 轨道底槽 (Channel)
+ * ========================================== */
+window.Bar .workspace-track {
+  background-color: rgba(0, 0, 0, 0.04); /* 极浅的轨道底色，就像凹槽 */
+  border-radius: 18px; /* 圆润的胶囊形轨道 */
+  padding: 4px; /* 轨道内边距，让里面的滑块不会顶到边缘 */
+}
+
+/* ==========================================
+ * 2. 滑动实体色块 (The Sliding Blob)
+ * ========================================== */
+window.Bar .indicator-block {
+  /* 必须和下面按钮的宽高一模一样！ */
+  min-width: 30px;
   min-height: 30px;
-  padding: 0 8px;
-  border-bottom: 1px solid rgba($color: #dfd8d8df, $alpha: 0.98);
-  arch-logo {
-    color: $blue;
-    font-size: 1.2rem;
-    margin-right: 12px;
-  }
+  border-radius: 15px; /* 正圆形滑块 */
+  
+  background-color: #d6c3cb; /* 莫兰迪暖灰粉（与 #fff8fb 绝配） */
+  box-shadow: 0 2px 6px rgba(214, 195, 203, 0.6); /* 滑块自带阴影，显得悬浮在轨道上 */
+  
+  /* 🎯 极其丝滑的物理阻尼滑动动画 */
+  transition: margin-left 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ==========================================
+ * 3. 顶层数字按钮 (Transparent Buttons)
+ * ========================================== */
+window.Bar .workspace-buttons {
+  /* 间距 4px，和 TSX 里的步长计算对应 */
+  margin: 0;
+}
+
+window.Bar .workspace-btn {
+  all: unset;
+  /* 尺寸必须和 indicator-block 严丝合缝 */
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 15px;
+  
+  /* 重点：背景必须完全透明，因为颜色是由底下的滑块提供的！ */
+  background-color: transparent; 
+  color: #b5a4ab; /* 未选中时的暗淡文字 */
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+window.Bar .workspace-btn label {
+  margin: 0; 
+}
+
+/* ==========================================
+ * 4. 激活状态的文字变化
+ * ========================================== */
+window.Bar .workspace-btn.active {
+  /* 当滑块滑到这个数字下面时，文字变深变粗以提升对比度 */
+  color: #3d3337; 
+  font-weight: 900;
+}
+/* ==========================================
+ * 右侧：时钟与电源键
+ * ========================================== */
+window.Bar .clock {
+  font-weight: 900;
+  color: #6e5d63;
+  margin-right: 12px;
+}
+
+window.Bar .logout-btn {
+  all: unset;
+  color: #b5a4ab; /* 融入背景 */
+  font-size: 1.2rem;
+  padding: 4px 12px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  margin-right: 8px;
+}
+
+/* 电源键悬停时稍微显露一点警示色，但依然保持低饱和度 */
+window.Bar .logout-btn:hover {
+  background-color: rgba(200, 100, 100, 0.1); 
+  color: #c46872;
 }

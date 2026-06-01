@@ -9,6 +9,11 @@
     // "checkJs": true,
     // "allowJs": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "ags/gtk4"
+    "jsxImportSource": "ags/gtk4",
+    "types": [
+      "@girs/gtk-4.0",
+      "@girs/gdk-4.0",
+      "@girs/glib-2.0"
+    ]
   }
 }

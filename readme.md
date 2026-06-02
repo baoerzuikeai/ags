@@ -44,4 +44,5 @@ ags/
 
 ```bash
 yay -S matugen-bin   #色彩引擎
+sudo pacman -S wl-clipboard grim slurp  剪切板 截屏 区域选择
 ```

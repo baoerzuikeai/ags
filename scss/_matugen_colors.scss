@@ -3,13 +3,13 @@
    * 1. 核心强调色 (Primary) 
    * 用于最重要的突出显示
    * ========================================== */
-  --primary: #511920;
+  --primary: #511a12;
   --on-primary: #ffffff;
-  --primary-container: #75353c;
+  --primary-container: #76362c;
   --on-primary-container: #ffffff;
-  --inverse-primary: #ffb2b7;
-  --primary-fixed: #75353c;
-  --primary-fixed-dim: #591f26;
+  --inverse-primary: #ffb4a7;
+  --primary-fixed: #76362c;
+  --primary-fixed-dim: #592018;
   --on-primary-fixed: #ffffff;
   --on-primary-fixed-variant: #ffffff;
 
@@ -17,12 +17,12 @@
    * 2. 次级强调色 (Secondary)
    * 用于较柔和的高亮
    * ========================================== */
-  --secondary: #3f2527;
+  --secondary: #3f2521;
   --on-secondary: #ffffff;
-  --secondary-container: #5f4143;
+  --secondary-container: #60423d;
   --on-secondary-container: #ffffff;
-  --secondary-fixed: #5f4143;
-  --secondary-fixed-dim: #462b2d;
+  --secondary-fixed: #60423d;
+  --secondary-fixed-dim: #472c27;
   --on-secondary-fixed: #ffffff;
   --on-secondary-fixed-variant: #ffffff;
 
@@ -30,12 +30,12 @@
    * 3. 第三强调色 (Tertiary)
    * 用于需要与主色调区分的对比色，如特殊的警告、链接
    * ========================================== */
-  --tertiary: #3e2703;
+  --tertiary: #392a01;
   --on-tertiary: #ffffff;
-  --tertiary-container: #5f441d;
+  --tertiary-container: #59471b;
   --on-tertiary-container: #ffffff;
-  --tertiary-fixed: #5f441d;
-  --tertiary-fixed-dim: #462e08;
+  --tertiary-fixed: #59471b;
+  --tertiary-fixed-dim: #403006;
   --on-tertiary-fixed: #ffffff;
   --on-tertiary-fixed-variant: #ffffff;
 
@@ -52,33 +52,33 @@
    * 5. 表面与背景 (Surfaces & Backgrounds)
    * 极其重要：用于构建不同层级的容器，配合 rgba 可实现完美的磨砂玻璃
    * ========================================== */
-  --background: #fff8f7;
-  --on-background: #22191a;
+  --background: #fff8f6;
+  --on-background: #231918;
   
-  --surface: #fff8f7;
-  --surface-dim: #c5b5b5;
-  --surface-bright: #fff8f7;
-  --surface-tint: #8f4a50;
-  --surface-variant: #f4ddde;
+  --surface: #fff8f6;
+  --surface-dim: #c6b5b2;
+  --surface-bright: #fff8f6;
+  --surface-tint: #904b40;
+  --surface-variant: #f5ddd9;
 
   --surface-container-lowest: #ffffff;
-  --surface-container-low: #ffeded;
-  --surface-container: #f0dede;
-  --surface-container-high: #e2d0d0;
-  --surface-container-highest: #d3c3c3;
+  --surface-container-low: #ffedea;
+  --surface-container: #f1dfdb;
+  --surface-container-high: #e2d1ce;
+  --surface-container-highest: #d4c3c0;
 
   --on-surface: #000000;
   --on-surface-variant: #000000;
   
-  --inverse-surface: #382e2e;
+  --inverse-surface: #392e2c;
   --inverse-on-surface: #ffffff;
 
   /* ==========================================
    * 6. 边框与轮廓 (Outlines)
    * 用于输入框边框、分割线
    * ========================================== */
-  --outline: #362929;
-  --outline-variant: #554546;
+  --outline: #372927;
+  --outline-variant: #554643;
 
   /* ==========================================
    * 7. 阴影与遮罩 (Shadow & Scrim)

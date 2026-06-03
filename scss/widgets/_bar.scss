@@ -3,7 +3,7 @@ window.Bar {
   background-color: var(--surface);
   margin-top: 10px;
   border-radius: 19px; /* 圆润的底部边角 */
-  color: var(--on-surface-variant);
+  color: var(--on-surface);
   min-height: 36px;
   border-bottom: 1px solid var(--surface-variant);
 }
@@ -24,7 +24,7 @@ window.Bar .arch-logo {
 /* 1. 外部底槽容器 */
 window.Bar .workspace-pill-container {
   /* 使用高亮容器色作为底座，让里面的点更明显 */
-  background-color: var(--surface-container-highest); 
+  background-color: var(--surface-variant); 
   border-radius: 20px;
   padding: 4px 6px; /* 上下左右内边距，包裹住点点 */
 }
@@ -38,7 +38,7 @@ window.Bar .workspace-dot {
   border-radius: 6px; 
   
   /* 颜色使用相对暗淡的文字变体色 */
-  background-color: var(--on-surface-variant); 
+  background-color: var(--surface-container-lowest); 
   opacity: 0.4; /* 半透明，显得低调 */
 
   /* 核心魔法：宽度、颜色、透明度的平滑过渡 */
@@ -56,49 +56,65 @@ window.Bar .workspace-dot.active {
   /* 瞬间拉长！ */
   min-width: 32px; 
   /* 颜色切换为主题的高亮强调色 */
-  background-color: var(--primary); 
+  background-color: var(--surface-container-highest); 
   opacity: 1; 
-  box-shadow: 0 0 8px color-mix(in srgb, var(--primary) 40%, transparent); /* 自带一点柔和发光 */
+  box-shadow: 0 0 8px color-mix(in srgb, var(--surface-container-highesty) 40%, transparent); /* 自带一点柔和发光 */
 }
-
-
 
 
 /* ==========================================
  * 右侧：系统模块 (SysTray, Clock, Power)
  * ========================================== */
 
-/* 1. 整体胶囊背景 */
-window.Bar .system-module {
-  /* 使用与工作区轨道相同的高级容器色，保持对称 */
-  background-color: var(--surface-container-highest);
-  border-radius: 18px; /* 胶囊圆角 */
-  padding: 2px;        /* 容器内边距，让里面的按钮不会顶边 */
-  margin: 6px;  
-  margin-right: 12px; /* 整体模块与右边距的距离 */
+window.Bar .systray {
+  margin-right: 4px;
+
+}
+
+window.Bar .systray .systray-item {
+  font-size: 1.1rem;
+}
+
+window.Bar button {
+  background: transparent;
+
 }
 
 
-window.Bar .clock {
-  font-weight: 900;
+window.Bar button:hover {
+  background-color: var(--surface-variant);
+}
+window.Bar .systray .systray-item .systray-item-icon{
   color: var(--on-surface);
-  /* ⚠️ 重要修改：因为外层用了 spacing={4} 和 padding，
-     所以去掉原本过大的 margin-right，让它在胶囊里更居中 */
 }
+
 
 /* 3. 电源键样式调整 */
 window.Bar .logout-btn {
   all: unset;
-  color: var(--on-surface-variant); 
-  font-size: 1.2rem;
-  /* 调整按钮自身的内边距，使其呈正方形或小圆角矩形 */
-  padding: 4px 8px; 
-  border-radius: 14px; /* 内部按钮的圆角要比外部容器的圆角小一点 */
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 19px;
   transition: all 0.2s ease;
-  /* 去掉原本的 margin-right: 8px */
 }
 
 window.Bar .logout-btn:hover {
   background-color: var(--error-container); 
   color: var(--on-error-container);
+}
+
+window.Bar .logout-btn:hover {
+  background-color: var(--error-container); 
+  color: var(--on-error-container);
+}
+
+window.Bar .clock-pill {
+  background-color: color-mix(in srgb, var(--surface) 60%, transparent);
+  border-radius: 100px; /* 完美圆角 */
+  padding: 4px 4px;
+  color: var(--on-surface);
+  font-weight: bold;
+}
+window.Bar .clock-icon {
+  color: var(--primary); /* 让图标带点主题色 */
 }

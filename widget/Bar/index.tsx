@@ -29,7 +29,6 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
                 <box $type="end" halign={Gtk.Align.END} spacing={1} valign={Gtk.Align.CENTER}>
                     <SysTray />
                     <box class="clock-pill" >
-                        <label label="󰃭" class="clock-icon" /> {/* 日历/时钟图标 */}
                         <Clock />
                     </box>
                     <box class="control-pill" spacing={4}>

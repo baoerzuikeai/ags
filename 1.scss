@@ -32,40 +32,50 @@ window.Bar .arch-logo {
 
 /* 1. 外部底槽容器 */
 window.Bar .workspace-pill-container {
-  /* 🎯 替换 var(--surface-container-high) -> 遵循颜色分级使用次级槽 */
   background-color: $layer1; 
-  border-radius: 20px;
-  padding: 4px 6px; 
+  border-radius: 10rem;
+  padding: 0.205rem 0.41rem; 
 }
 
 /* 2. 默认圆点 (未激活状态) */
 window.Bar .workspace-dot {
   all: unset;
-  min-width: 12px; 
+  min-width: $bar_ws_width; 
   min-height: 12px;
-  border-radius: 6px; 
+  border-radius: 10rem; 
   
-  /* 🎯 替换 var(--on-surface-variant) -> 使用对齐浅色主题的次级文字/图标色 */
-  background-color: $onSurfaceVariant; 
-  opacity: 0.3; 
+  background-color: transparent; 
+  color: $workspaceOnLayer1Inactive; 
+  opacity: 0.5;
 
-  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: 700ms cubic-bezier(0.1, 1, 0, 1); 
 }
 
 window.Bar .workspace-dot:hover {
-  opacity: 0.6;
+  color: $onLayer1;
+  opacity: 0.8;
 }
 
 /* 3. 胶囊 (激活状态) */
 window.Bar .workspace-dot.active {
-  min-width: 32px; 
-  /* 🎯 替换 var(--primary) -> 激活状态使用 Matugen 生成的 Primary 主色调 */
-  background-color: $primary; 
+  min-width: $bar_ws_width_focus_active; 
+  background-color: $workspaceLayer3;    /* 即 $primary */
   
-  /* 🎯 替换 color-mix -> 升级为符合现代 Dart Sass 规范的 color.mix 混合引擎 */
-  box-shadow: 0 0 8px color.mix($primary, transparent, 40%); 
+  /* 🎯 终极修复：把未定义的 $workspaceOnThemePrimary 改为对齐 end-4 引擎的 $workspaceOnLayer3 */
+  color: $workspaceOnLayer3;       
   opacity: 1; 
+  
+  /* 🎯 修复警告：阴影也升级为 color.mix */
+  box-shadow: 0 0 8px color.mix($primary, transparent, 40%); 
 }
+
+/* 4. 有窗口占用的工作区 (Occupied) */
+window.Bar .workspace-dot.occupied {
+  background-color: $layer2;
+  color: $workspaceOnLayer2;
+  opacity: 0.8;
+}
+
 
 /* ==========================================
  * 右侧：系统模块 (SysTray, Clock, Power)

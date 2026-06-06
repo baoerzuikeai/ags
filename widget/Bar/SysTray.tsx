@@ -22,7 +22,7 @@ export default function SysTray() {
             class="systray-item"
             $={(self) => init(self, item)}
           >
-            <image class="systray-item-icon" gicon={createBinding(item, "gicon")}></image>
+            <image gicon={createBinding(item, "gicon")}></image>
           </menubutton>
         )}
       </For>

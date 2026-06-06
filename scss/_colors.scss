@@ -1,0 +1,102 @@
+/* ==========================================================================
+ * 1. 引入 Sass 内置核心色彩模块 与 Matugen 纯色文件
+ * 我们不仅要向前转发底层 matugen_material，还要通过当前的 colors 接口
+ * 暴露出所有的底层变量
+ * ========================================================================== */
+@forward 'matugen_material';
+@use 'sass:color';
+@use 'matugen_material' as *;
+
+/* ==========================================================================
+ * 2. 动态半透明转换引擎 (遵循现代 Dart Sass 规范升级)
+ * ========================================================================== */
+@if $transparent == true {
+  $background: color.adjust($background, $alpha: -$rootTransparency);
+  $surface: color.adjust($surface, $alpha: -$transparency);
+  $surfaceDim: color.adjust($surfaceDim, $alpha: -$transparency);
+  $surfaceBright: color.adjust($surfaceBright, $alpha: -$transparency);
+  $surfaceContainerLowest: color.adjust($surfaceContainerLowest, $alpha: -$transparency);
+  $surfaceContainerLow: color.adjust($surfaceContainerLow, $alpha: -$transparency);
+  $surfaceContainer: color.adjust($surfaceContainer, $alpha: -$transparency);
+  $surfaceContainerHigh: color.adjust($surfaceContainerHigh, $alpha: -$transparency);
+  $surfaceContainerHighest: color.adjust($surfaceContainerHighest, $alpha: -$transparency);
+  $surfaceVariant: color.adjust($surfaceVariant, $alpha: -$transparency);
+  $inverseSurface: color.adjust($inverseSurface, $alpha: -$transparency);
+  $surfaceTint: color.adjust($surfaceTint, $alpha: -$transparency);
+}
+
+/* ==========================================================================
+ * 3. 核心图层派生与 Rice 映射体系 (升级为 color.mix)
+ * ========================================================================== */
+$subtext: $outline;
+$actiontext: color.mix($onBackground, $background, 85%);
+
+/* Layer 抽象 */
+$layer0: $background;
+$onLayer0: $onBackground;
+$layer0Hover: color.mix($layer0, $onLayer0, 85%);
+$layer0Active: $surfaceContainerHigh;
+$onLayer0Active: $onSurface;
+$onLayer0Inactive: color.mix($onLayer0, $layer0, 70%);
+
+$layer1: $surfaceContainerLow;
+$onLayer1: $onSurface;
+$onLayer1Inactive: color.mix($onLayer1, $layer1, 45%);
+$onLayer1: $onSurfaceVariant;
+
+$layer2: color.mix($surfaceContainer, $surfaceContainerHigh, 55%);
+$onLayer2: $onSurface;
+
+$layer3: color.mix($surfaceContainerHigh, $onSurface, 96%);
+$onLayer3: $onSurface;
+
+$layer1Hover: color.mix($layer1, $onLayer1, 85%);
+$layer1Active: color.mix($layer1, $onLayer1, 70%);
+$layer2Hover: color.mix($layer2, $onLayer2, 90%);
+$layer2Active: color.mix($layer2, $onLayer2, 80%);
+$layer3Hover: color.mix($layer3, $onLayer3, 90%);
+$layer3Active: color.mix($layer3, $onLayer3, 80%);
+
+/* 组件语义化变量映射 */
+$windowtitleOnLayer0Inactive: $onLayer0Inactive;
+$windowtitleOnLayer0: $onLayer0;
+$barspacerightOnLayer0: $onLayer0;
+$timeOnLayer1: $onLayer1;
+$dateOnLayer1: $onLayer1;
+
+$ramOnLayer1: $onLayer1;
+$ramLayer2: $secondaryContainer;
+$ramOnLayer2: $onSecondaryContainer;
+
+$swapOnLayer1: $onLayer1;
+$swapLayer2: $secondaryContainer;
+$swapOnLayer2: $onSecondaryContainer;
+
+$cpuOnLayer1: $onLayer1;
+$cpuLayer2: $secondaryContainer;
+$cpuOnLayer2: $onSecondaryContainer;
+
+$musicOnLayer1: $onLayer1;
+$musicLayer2: $secondaryContainer;
+$musicOnLayer2: $onSecondaryContainer;
+
+$utilsLayer2: $layer2;
+$utilsOnLayer2: $onLayer2;
+
+$battOnLayer1: $onLayer1;
+$battLayer2: $secondaryContainer;
+$battOnLayer2: $onSecondaryContainer;
+
+$workspaceOnLayer1Inactive: $onLayer1Inactive;
+$workspaceLayer3: $primary;
+$workspaceOnLayer3: $onPrimary;
+$workspaceOnLayer2: $onSecondaryContainer;
+
+$trayOnLayer0: $onLayer0;
+$brightnessOnLayer0: $onLayer0;
+$volumeOnLayer0: $onLayer0;
+
+/* 尺寸指标 */
+$bar_ws_width: 1.774rem;
+$bar_ws_width_focus: 0.614rem;
+$bar_ws_width_focus_active: 2.045rem;

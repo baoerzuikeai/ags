@@ -1,0 +1,51 @@
+$darkmode: false;
+$transparent: true; // 开启透明/磨砂玻璃支持
+
+$rootTransparency: 0.22; 
+$transparency: 0.75;
+
+// 从 Matugen 直接提取纯 Hex 赋予 SCSS 变量，供下方的 Sass 函数计算
+$background: #fff8f6;
+$onBackground: #221a15;
+$surface: #fff8f6;
+$surfaceDim: #c5b6af;
+$surfaceBright: #fff8f6;
+$surfaceTint: #8d4e2a;
+$surfaceVariant: #f4ded4;
+$inverseSurface: #382e29;
+
+$surfaceContainerLowest: #ffffff;
+$surfaceContainerLow: #ffede6;
+$surfaceContainer: #f0dfd8;
+$surfaceContainerHigh: #e2d1ca;
+$surfaceContainerHighest: #d4c3bc;
+
+$onSurface: #000000;
+$onSurfaceVariant: #000000;
+$inverseOnSurface: #ffffff;
+
+$outline: #362923;
+$outlineVariant: #55463f;
+$shadow: #000000;
+$scrim: #000000;
+
+$primary: #4d1e00;
+$onPrimary: #ffffff;
+$primaryContainer: #733a17;
+$onPrimaryContainer: #ffffff;
+$inversePrimary: #ffb68f;
+
+$secondary: #3e2619;
+$onSecondary: #ffffff;
+$secondaryContainer: #5f4334;
+$onSecondaryContainer: #ffffff;
+
+$tertiary: #302d04;
+$onTertiary: #ffffff;
+$tertiaryContainer: #4e4a1f;
+$onTertiaryContainer: #ffffff;
+
+$error: #600004;
+$onError: #ffffff;
+$errorContainer: #98000a;
+$onErrorContainer: #ffffff;

@@ -48,4 +48,6 @@ sudo pacman -S wl-clipboard grim slurp  #剪切板 截屏 区域选择
 sudo pacman -S papirus-icon-theme #icon
 yay -S sddm-astronaut-theme 
 sudo pacman -S adw-gtk-theme    
+
+yay -S libastal-network-git
 ```

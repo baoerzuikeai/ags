@@ -4,6 +4,7 @@ import Logout from "./Logout"
 import Clock from "./Clock"
 import Workspaces from "./Workspaces"
 import SysTray from "./SysTray"
+import WifiMenu from "./WifiMenu"
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
     const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
@@ -30,6 +31,8 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
                     <SysTray />
                     <box class="clock-pill" >
                         <Clock />
+
+                        <WifiMenu></WifiMenu>
                     </box>
                     <box class="control-pill" spacing={4}>
                         <Logout />
